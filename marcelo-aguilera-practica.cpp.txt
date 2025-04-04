@@ -1,0 +1,127 @@
+#include <iostream>
+using namespace std;
+int main() {
+    char respuesta1;
+    string respuesta2;
+    string respuesta3;
+    string respuesta4;
+    string respuesta5;
+    string a = "a";
+    string b = "b";
+    string c = "c";
+    int contador = 0;
+    do {
+    cout << "◘ Holu, en este programa tomarás decisiones para ver los posibles destinos que pudieron haber ocurrido en la batalla de Wakanda en Avengers Infinity War, estarás ocupando el rol de THOR; responde todas las preguntas con minúsculas y con a, b, c, etc. Dependiendo el inciso de la pregunta." << endl;
+    cout << "¿Quieres jugar?" << endl;
+    cin >> respuesta2;
+    if (respuesta2 != "si" && respuesta2 != "no") {
+        cout << "- Lea bien las instrucciones de entrada" << endl;
+        }
+    } while(respuesta2 != "si" && respuesta2 != "no");
+    //repite el cout hasta que el jugador ingrese "si" o "no".
+    
+    if (respuesta2 == "no") {
+        cout << "Ok :/" << endl;
+        return 0;
+    } else if (respuesta2 == "si") {
+        cout << "Empezemos!!!" << endl;
+    } else {
+        cout << "Ingrese la respuesta correctamente según la órden" << endl;
+    }   
+    do {
+        cout << "◘ Estás en Nidavellir, lugar donde Eitri forjó el Mjölnir, estás en busca de una nueva arma para enfrentar a Thanos, le preguntas a Eitri si puede fabricarla y te responde lo siguiente: " << endl;
+        cout << "- Puedo hacerlo, pero para eso necesitamos reiniciar la forja y despertar el corazón de una estrella moribunda" << endl;
+        cout << "¿QUÉ HACES?" << endl;
+        cout << "a) Quedarte y ayudar a forjar el arma." << endl;
+        cout << "b) Irte y enfrentarte a Thanos sin un arma." << endl;
+        cin >> respuesta1;
+        if (respuesta1 != 'a' && respuesta1 != 'b') {
+        cout << "- Lea bien las instrucciones de entrada" << endl;
+        }
+    } while(respuesta1 != 'a' && respuesta1 != 'b');
+    contador ++;
+    
+    if (respuesta1 == 'a') {
+        do {
+        cout << "◘ Te diriges a encender el mecanismo junto a Rocket y te das cuenta que hay una falla, este se apaga solo: " << endl;
+         cout << "¿QUÉ HACES?" << endl;
+         cout << "a) Decides que no hay tiempo y te vas sin el arma." << endl;
+         cout << "b) Decides quedarte y mantenerla encendida por vos mismo." << endl;
+         cin >> respuesta3;
+        
+         if (respuesta3 != "a" && respuesta3 != "b") {
+        cout << "- Lea bien las instrucciones de entrada" << endl;
+        }
+    } while(respuesta3 != "a" && respuesta3 != "b");
+    contador ++;
+    
+         if (respuesta3 == "a") {
+             do {
+             cout << "◘ Al no tener el arma, viajas a Wakanda en la nave de rocket, lo cual hace que tardes en llegar." << endl;
+             cout << "Llegas en el momento en el que Thanos está por matar a Vision." << endl;
+             cout << "¿QUÉ HACES?" << endl;
+             cout << "a) Vas directo a Thanos sin pensarlo sin ninguna arma" << endl;
+             cout << "b) Vas directo a Thanos con el arma de Rocket" << endl;
+             cin >> respuesta4;
+             
+             if (respuesta4 != "a" && respuesta4 != "b") {
+        cout << "- Lea bien las instrucciones de entrada" << endl;
+        }
+    } while(respuesta4 != "a" && respuesta4 != "b");
+    contador ++;
+    
+        if (respuesta4 == "a" || respuesta4 == "b") {
+            cout << "FINAL 1: No percataste que Thanos tenía las 5 gemas y te manda a dormir de un solo golpe." << endl;
+            cout << "---FIN---" << endl;
+            }   
+         } else if (respuesta3 == "b") {
+             do {
+                cout << "◘ La máquina al estar fregada tiene como función absorber toda la energía, asi que tu decides absorber toda la energía de la estrella." << endl;
+                cout << "Una vez con toda la energía necesaria te desmayas y ya tienes tu arma lista." << endl;
+                cout << "Groot usa su brazo como mango y se van directo a la batalla en Wakanda." << endl;
+                cout << "Llegas y luego de pelear contra los bichos de Thanos, vas directo a matar a Thanos con el Stormbreaker (Tu nueva arma)." << endl;
+                cout << "Vas hacia el con el objetivo de usar tu arma." << endl;
+                cout << "¿QUÉ HACES?" << endl;        
+                cout << "a) Apuntas a la cabeza." << endl;
+                cout << "b) Vas directo sin pensar con todas tus fuerzas posibles." << endl;
+                cout << "c) Apuntas al pecho." << endl;
+                cin >> respuesta5;
+                
+                if (respuesta5 != "a" && respuesta5 != "b" && respuesta5 != "c") {
+        cout << "- Lea bien las instrucciones de entrada" << endl;
+        }
+    } while(respuesta5 != "a" && respuesta5 != "b" && respuesta5 != "c");
+    contador ++;
+    
+                if (respuesta5 == "b" || respuesta5 == "c") {
+                    cout << "FINAL 2: El ataque no mata a Thanos ni puede detenerlo porque tiene la gema del tiempo. Thanos chasquea los dedos..." << endl;
+                    cout << "---FIN---" << endl;
+                }  else if (respuesta5 == "a") {
+                        cout << "FINAL 3: Tu ataque decapitó a Thanos, por ende lo mataste :)." << endl;
+                    }
+         }
+    } if (respuesta1 == 'b') {
+        do {
+        cout << "◘ Al no tener el arma, viajas a Wakanda en la nave de rocket, lo cual hace que tardes en llegar." << endl;
+             cout << "Llegas en el momento en el que Thanos está por matar a Vision." << endl;
+             cout << "¿QUÉ HACES?" << endl;
+             cout << "a) Vas directo a Thanos sin pensarlo sin ninguna arma" << endl;
+             cout << "b) Vas directo a Thanos con el arma de Rocket" << endl;
+             cin >> respuesta4;
+             
+             if (respuesta4 != "a" && respuesta4 != "b") {
+        cout << "- Lea bien las instrucciones de entrada" << endl;
+        }
+    } while(respuesta4 != "a" && respuesta4 != "b");
+    contador ++;
+    
+        if (respuesta4 == "a" || respuesta4 == "b") {
+            cout << "FINAL 1: No percataste que Thanos tenía las 5 gemas y te manda a dormir de un solo golpe." << endl;
+            cout << "---FIN---" << endl;
+            }   else {
+        cout << "Ingrese la respuesta correctamente según la órden" << endl;
+    }   
+    } cout << "Tomaste " << contador << " decisiones" << endl;
+
+    return 0;
+}
