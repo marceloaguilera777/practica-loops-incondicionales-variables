@@ -1,0 +1,130 @@
+EJERCICIO 1 DE SENO
+- PSEUDOCÓDIGO:
+INICIO
+
+Declarar i, j, n, expo = 1 como enteros
+Declarar x como flotante
+Declarar resultado = 0, factorial como flotantes doubles
+Escribir "Ingrese el ángulo x (en radianes): "
+Guardar en x
+Escribir "Ingrese el númerode términos de la serie (mientras más grande el término será más precisa la respuesta): "
+Guardar en n
+Para i desde 1 hasta n incrementando en 1 hacer factorial = 1
+Para j desde 1 hasta expo incrementandon en 1 hacer factorial *= j
+Fin del for
+Si i % 2 == 0 
+entonces resultado = resultado - pow(x, expo) / factorial;
+Sino resultado = resultado + pow(x,expo) / factorial;
+Escribir resultado
+expo = expo + 2
+Fin del for
+Escribir "El seno de x es: " + resultado
+
+FIN
+
+- CÓDIGO: 
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    int i, j, n, expo = 1;
+    float x;
+    double resultado = 0, factorial;
+    
+    cout << "Ingrese el ángulo x (en radianes): " << endl;
+    cin >> x;
+    cout << "Ingrese el númerode términos de la serie (mientras más grande el término será más precisa la respuesta): " << endl;
+    cin >> n;
+    
+    for (i = 1; i <= n; i++) {
+        factorial = 1;
+        for (j = 1; j <= expo; j++)
+        factorial *= j;
+        if (i%2==0) //aquí el término es par.
+        resultado = resultado - pow(x, expo) / factorial;
+        else 
+        resultado = resultado + pow(x, expo) / factorial;
+        
+        cout << resultado << endl;
+        expo = expo + 2;
+    }
+    cout << "El seno de x es: " << resultado << endl;
+
+    return 0;
+}
+
+
+
+EJERCICIO 2 DE SUMAS DE POSITIVOS Y NEGATIVOS
+- PSEUDOCÓDIGO: 
+INICIO
+
+DECLARAR num, sump = 0, sumn = 0, sumtotal = 0, sum4 = 0, contador = 0 como enteros
+HACER 
+MOSTRAR "Ingrese los valores para el cálculo: "
+GUARDAR en num
+SI num != 0
+ENTONCES contador ++
+FIN DEL IF
+SI num > 0
+ENTONCES sump += num
+FIN DEL IF
+SI num < 0
+ENTONCES sumn += num;
+FIN DEL IF
+
+MIENTRAS num != 0
+MOSTRAR "SUMA DE POSITIVOS: " + sump
+MOSTRAR "SUMA DE NEGATIVOS: " + sumn
+MOSTRAR "SUMA TOTAL: " + sumtotal
+MOSTRAR "NÚMEROS INGRESADOS: " + contador
+SI contador == 0
+ENTONCES 
+MOSTRAR "PROMEDIO ARITMÉTICO: 0" 
+SINO 
+MOSTRAR "PROMEDIO ARITMÉTICO: " + sumtotal / contador
+
+FIN
+
+- CÓDIGO
+#include <iostream>
+using namespace std;
+int main() {
+   int num;
+   int sump = 0;
+   int sumn = 0;
+   int sumtotal = 0;
+   int sum4 = 0;
+   int contador = 0;
+ 
+   do {
+       cout << "Ingrese los valores para el cálculo: " << endl;
+       cin >> num;
+      if (num != 0) {
+          contador ++; //contador,  como empieza en 0, al ingresar el          0 para salir del bucle no se contará este.
+      }
+      if (num > 0) { 
+           sump += num; //suma de numeros positivos.
+          
+      } 
+      if (num < 0) {
+               sumn += num; //suma de numeros negativos.
+           }
+           if (num < 0 || num > 0) { 
+               sumtotal += num; //suma total, positivos y                         negativos.
+           }
+       
+   } while (num != 0);
+  cout << "Yeye" << endl;
+  cout << "SUMA DE POSITIVOS: "<< sump << endl;
+  cout << "SUMA DE NEGATIVOS: " << sumn << endl;
+  cout << "SUMA TOTAL: " << sumtotal<< endl;
+  cout << "NÚMEROS INGRESADOS: " << contador << endl;
+  if (contador == 0) {
+      cout << "PROMEDIO ARITMÉTICO: 0" << endl;
+  } else {
+  cout << "PROMEDIO ARITMÉTICO: " << sumtotal / contador << endl; //A la suma total se la divide por el número de números ingresados para saber el promedio.
+    }
+
+return 0;
+} 
